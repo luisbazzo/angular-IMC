@@ -1,0 +1,39 @@
+ <div class="form-box">
+    <div class="form-imc">
+        <h2>Calculadora de IMC</h2>
+
+        <div class="form-content">
+            <input type="number" name="alt" [(ngModel)]="alt" required>
+            <label>Altura</label>
+        </div><!--form-content-->
+
+        <div class="form-content">
+            <input type="number" name="peso" [(ngModel)]="peso" required>
+            <label>Peso</label>
+        </div><!--form-content-->
+
+        <h3>Selecione o seu gênero</h3>
+
+        <div class="form-gen">
+            <div class="gender-icon">
+                <input type="checkbox" id="woman-check">
+                <ion-icon name="woman" id="woman-ico"></ion-icon>
+            </div><!--gender-icon-->
+            <div class="gender-icon">
+                <input type="checkbox" id="man-check">
+                <ion-icon name="man" id="man-ico"></ion-icon>
+            </div><!--gender-icon-->
+        </div><!--form-gen-->
+        <div class="clear"></div><!--clear-->
+
+        <div class="form-calcular">
+            <button type="button" (click)="calcIMC()">Calcular IMC</button>
+            <ion-icon name="trash-bin" id="limpar-ico" (click)="limpar()"></ion-icon>
+        </div><!--form-calcular-->
+
+        <div class="form-result">
+            <textarea [value]="resp" readonly></textarea>
+        </div><!--form-result-->
+
+    </div><!--form-imc-->
+</div><!--form-box-->
